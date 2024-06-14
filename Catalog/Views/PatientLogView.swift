@@ -48,6 +48,7 @@ struct PatientLogView: View {
                         Button(action: {
                             // openConsentFormView.toggle()
                             image = returnScreenshot()
+                            // Saves image as the snapshot from ConsentFormView
                             showingImage = true
                         })
                         {
@@ -78,7 +79,7 @@ struct PatientLogView: View {
                     else {
                         VStack {
                             Spacer(minLength: 100)
-                            // Known bug with iOS 17.3: ignore any entitlement errors in XCode
+                            // Known bug with iOS 17.3: ignore any entitlement errors in XCode with ShareLink
                             ShareLink(
                                 item: image!,
                                 preview: SharePreview("PatientLog_\(getTime())", image: image!)

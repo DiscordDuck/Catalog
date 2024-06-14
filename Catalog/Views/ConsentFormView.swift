@@ -21,6 +21,8 @@ struct ConsentFormView: View {
         ? retrieveData()
         : ["Sample", "3000", [] as [Any], [] as [Any]]
     
+    // Each data value is stored as a separate State value
+    // and attached as $binding variables to each TextField/Picker
     @State private var birthDate = Date()
     @State private var selection = ""
     @State private var address = ""
@@ -33,12 +35,16 @@ struct ConsentFormView: View {
     @State private var contactPhone = ""
     @State private var reason = ""
     
+    // alert as Bool: an on/off switch for displaying "message"
     @State private var message = ""
     @State private var alert = false
     
+    // done: a state variable to show/hide form
     @State private var done = false
     
     var mainContent: some View {
+        // VStacks, HStacks, and ZStacks are used to organize layouts
+        // according to each axis, with Spacers() acting as physical spacers
         VStack {
             HStack {
                 Spacer()
@@ -98,6 +104,7 @@ struct ConsentFormView: View {
                         .padding(.leading, 30)
                     TextField("__________________________________________________", text: $address)
                         .onReceive(Just(address)) { newValue in
+                            // Rejects erroneous data input
                             let filtered = newValue.filter { "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,. ".contains($0) }
                             if filtered != newValue {
                                 self.address = filtered
@@ -110,6 +117,7 @@ struct ConsentFormView: View {
                         .padding(.leading, 0)
                     TextField("_______________", text: $postal)
                         .onReceive(Just(postal)) { newValue in
+                            // Rejects erroneous data input
                             let filtered = newValue.filter { "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".contains($0) }
                             if filtered != newValue || newValue.count > 6 {
                                 self.postal = filtered.uppercased()
@@ -127,6 +135,7 @@ struct ConsentFormView: View {
                         .padding(.leading, 30)
                     TextField("_________________", text: $home)
                         .onReceive(Just(home)) { newValue in
+                            // Rejects erroneous data input
                             let filtered = newValue.filter { "0123456789()- ".contains($0) }
                             if filtered != newValue {
                                 self.home = filtered
@@ -140,6 +149,7 @@ struct ConsentFormView: View {
                         .padding(.leading, 10)
                     TextField("_________________________", text: $cell)
                         .onReceive(Just(cell)) { newValue in
+                            // Rejects erroneous data input
                             let filtered = newValue.filter { "0123456789()- ".contains($0) }
                             if filtered != newValue {
                                 self.cell = filtered
@@ -153,6 +163,7 @@ struct ConsentFormView: View {
                         .padding(.leading, 0)
                     TextField("_____________________", text: $email)
                         .onReceive(Just(email)) { newValue in
+                            // Rejects erroneous data input
                             let filtered = newValue.filter { "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@.".contains($0) }
                             if filtered != newValue {
                                 self.email = filtered
@@ -171,6 +182,7 @@ struct ConsentFormView: View {
                         .padding(.leading, 30)
                     TextField("______________", text: $contact)
                         .onReceive(Just(contact)) { newValue in
+                            // Rejects erroneous data input
                             let filtered = newValue.filter { "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ".contains($0) }
                             if filtered != newValue {
                                 self.contact = filtered
@@ -184,6 +196,7 @@ struct ConsentFormView: View {
                         .font(.custom("BookAntiqua", size: 15))
                     TextField("__________________", text: $relationship)
                         .onReceive(Just(relationship)) { newValue in
+                            // Rejects erroneous data input
                             let filtered = newValue.filter { "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ".contains($0) }
                             if filtered != newValue {
                                 self.relationship = filtered
@@ -198,6 +211,7 @@ struct ConsentFormView: View {
                         .padding(.trailing, 2)
                     TextField("____________________", text: $contactPhone)
                         .onReceive(Just(contactPhone)) { newValue in
+                            // Rejects erroneous data input
                             let filtered = newValue.filter { "0123456789()- ".contains($0) }
                             if filtered != newValue {
                                 self.contactPhone = filtered
@@ -214,6 +228,7 @@ struct ConsentFormView: View {
                     TextField("________________________________________________________________________", text: $reason)
                         .fixedSize()
                         .onReceive(Just(reason)) { newValue in
+                            // Rejects erroneous data input
                             let filtered = newValue.filter { "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ".contains($0) }
                             if filtered != newValue {
                                 self.reason = filtered
@@ -232,6 +247,7 @@ struct ConsentFormView: View {
         if !done {
             VStack {
                 mainContent
+                    // Associate with a boolean ID to refresh the view whenever the boolean updates
                     .id(loadStaticView)
                     .onAppear {
                         displayAsComplete = false
@@ -278,6 +294,7 @@ struct ConsentFormView: View {
         return format.date(from: String(str[range]))
     }
     
+    // Fills the form with any pre-filled data from previous entries
     func fillForm() {
         if !retrieveData().indices.contains(17) {
             return
@@ -296,6 +313,7 @@ struct ConsentFormView: View {
         reason = rawData[17] as! String
     }
     
+    // Takes a screenshot of the entire form view
     func screenshotForm() {
         uiImage = UIApplication.shared.keyWindow_?.rootViewController?.view.asImage()
         if loadStaticView {
@@ -303,6 +321,7 @@ struct ConsentFormView: View {
         }
     }
     
+    // Returns an [Int] array of the current time
     func getTime() -> [Int] {
         let now = Date()
         let calendar = Calendar.current
@@ -315,6 +334,7 @@ struct ConsentFormView: View {
         return [rawDate.year!, rawDate.month!, rawDate.day!]
     }
     
+    // Submits the new patient data
     func submit() {
         if selection.isEmpty || address.isEmpty || postal.isEmpty || home.isEmpty || cell.isEmpty || email.isEmpty || contact.isEmpty || relationship.isEmpty || contactPhone.isEmpty || reason.isEmpty {
             message = "Missing fields. Please fill in all parts of the form!"
@@ -338,6 +358,7 @@ struct ConsentFormView: View {
         }
     }
     
+    // Prompts the device for authentication via Face ID or passcode
     func authenticate() {
         let context = LAContext()
         var error: NSError?
@@ -357,6 +378,7 @@ struct ConsentFormView: View {
         }
     }
     
+    // Dismisses the current view
     func exit() {
         loadStaticView = false
         DispatchQueue.main.async {
@@ -371,7 +393,7 @@ func returnScreenshot() -> Image? {
     return Image(uiImage: uiImage!)
 }
 
-// inspired by: https://stackoverflow.com/questions/68387187/how-to-use-uiwindowscene-windows-on-ios-15
+// Sourced from: https://stackoverflow.com/a/68989580
 extension UIApplication {
     
     var keyWindow_: UIWindow? {
@@ -389,7 +411,7 @@ extension UIApplication {
     
 }
 
-// https://stackoverflow.com/questions/30696307/how-to-convert-a-uiview-to-an-image
+// Sourced from: https://stackoverflow.com/a/41288197
 extension UIView {
     
     func asImage() -> UIImage {

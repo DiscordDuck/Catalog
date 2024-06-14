@@ -3,28 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8C1B133D2C08CE2F00B4867C /* PatientLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B133C2C08CE2E00B4867C /* PatientLogView.swift */; };
 		8C4DC63D2C046BE900E1C798 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DC63C2C046BE900E1C798 /* CatalogApp.swift */; };
-		8C4DC63F2C046BE900E1C798 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DC63E2C046BE900E1C798 /* ContentView.swift */; };
 		8C4DC6412C046BEA00E1C798 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C4DC6402C046BEA00E1C798 /* Assets.xcassets */; };
 		8C4DC6442C046BEA00E1C798 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C4DC6432C046BEA00E1C798 /* Preview Assets.xcassets */; };
 		8C4DC64E2C046BEB00E1C798 /* CatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DC64D2C046BEB00E1C798 /* CatalogTests.swift */; };
 		8C4DC6582C046BEB00E1C798 /* CatalogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DC6572C046BEB00E1C798 /* CatalogUITests.swift */; };
 		8C4DC65A2C046BEB00E1C798 /* CatalogUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DC6592C046BEB00E1C798 /* CatalogUITestsLaunchTests.swift */; };
-		8C4DC66F2C046C8200E1C798 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C4DC6692C046C8100E1C798 /* Poppins-ExtraLight.ttf */; };
-		8C4DC6702C046C8200E1C798 /* toona.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C4DC66A2C046C8100E1C798 /* toona.ttf */; };
-		8C4DC6712C046C8200E1C798 /* Book Antiqua Font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C4DC66B2C046C8100E1C798 /* Book Antiqua Font.ttf */; };
-		8C4DC6722C046C8200E1C798 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C4DC66C2C046C8100E1C798 /* Poppins-Regular.ttf */; };
-		8C4DC6732C046C8200E1C798 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C4DC66D2C046C8100E1C798 /* OpenSans-Regular.ttf */; };
-		8C4DC6742C046C8200E1C798 /* Book Antiqua Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C4DC66E2C046C8200E1C798 /* Book Antiqua Bold.ttf */; };
-		8C4DC6782C046CB700E1C798 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DC6772C046CB700E1C798 /* SplashView.swift */; };
-		8C4DC67A2C046CD400E1C798 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DC6792C046CD400E1C798 /* HomeView.swift */; };
 		8C4DC6862C04FF4E00E1C798 /* ConsentFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DC6852C04FF4E00E1C798 /* ConsentFormView.swift */; };
 		8C6E05892C1C1AAC0061CD29 /* ExportDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6E05882C1C1AAC0061CD29 /* ExportDataView.swift */; };
+		8CC8EF092C1CC32C00361852 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC8EF082C1CC32C00361852 /* HomeView.swift */; };
+		8CC8EF0D2C1CC35600361852 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC8EF0C2C1CC35600361852 /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +41,6 @@
 		8C1B133C2C08CE2E00B4867C /* PatientLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientLogView.swift; sourceTree = "<group>"; };
 		8C4DC6392C046BE900E1C798 /* Catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4DC63C2C046BE900E1C798 /* CatalogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogApp.swift; sourceTree = "<group>"; };
-		8C4DC63E2C046BE900E1C798 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8C4DC6402C046BEA00E1C798 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C4DC6432C046BEA00E1C798 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8C4DC6492C046BEB00E1C798 /* CatalogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatalogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,18 +48,16 @@
 		8C4DC6532C046BEB00E1C798 /* CatalogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatalogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4DC6572C046BEB00E1C798 /* CatalogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogUITests.swift; sourceTree = "<group>"; };
 		8C4DC6592C046BEB00E1C798 /* CatalogUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		8C4DC6692C046C8100E1C798 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
-		8C4DC66A2C046C8100E1C798 /* toona.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = toona.ttf; sourceTree = "<group>"; };
-		8C4DC66B2C046C8100E1C798 /* Book Antiqua Font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Book Antiqua Font.ttf"; sourceTree = "<group>"; };
-		8C4DC66C2C046C8100E1C798 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
-		8C4DC66D2C046C8100E1C798 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
-		8C4DC66E2C046C8200E1C798 /* Book Antiqua Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Book Antiqua Bold.ttf"; sourceTree = "<group>"; };
-		8C4DC6772C046CB700E1C798 /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashView.swift; path = ../../../../Downloads/Catalog/Catalog/Views/SplashView.swift; sourceTree = "<group>"; };
-		8C4DC6792C046CD400E1C798 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = ../../../../Downloads/Catalog/Catalog/Views/HomeView.swift; sourceTree = "<group>"; };
-		8C4DC67B2C04F32300E1C798 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../../Downloads/Catalog/Catalog/Info.plist; sourceTree = "<group>"; };
 		8C4DC6852C04FF4E00E1C798 /* ConsentFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentFormView.swift; sourceTree = "<group>"; };
 		8C6E05882C1C1AAC0061CD29 /* ExportDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportDataView.swift; sourceTree = "<group>"; };
+		8CC8EF082C1CC32C00361852 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8CC8EF0C2C1CC35600361852 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		8CC8EF0E2C1CC47B00361852 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8CC8EF162C1CC49100361852 /* Fonts */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Fonts; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8C4DC6362C046BE900E1C798 /* Frameworks */ = {
@@ -117,12 +107,12 @@
 		8C4DC63B2C046BE900E1C798 /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
-				8C4DC67B2C04F32300E1C798 /* Info.plist */,
-				8C4DC6682C046C8100E1C798 /* Fonts */,
 				8C4DC6672C046C5300E1C798 /* Views */,
 				8C4DC63C2C046BE900E1C798 /* CatalogApp.swift */,
 				8C4DC6402C046BEA00E1C798 /* Assets.xcassets */,
 				8C4DC6422C046BEA00E1C798 /* Preview Content */,
+				8CC8EF0E2C1CC47B00361852 /* Info.plist */,
+				8CC8EF162C1CC49100361852 /* Fonts */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -156,27 +146,12 @@
 			isa = PBXGroup;
 			children = (
 				8C4DC6852C04FF4E00E1C798 /* ConsentFormView.swift */,
-				8C4DC6792C046CD400E1C798 /* HomeView.swift */,
-				8C4DC6772C046CB700E1C798 /* SplashView.swift */,
-				8C4DC63E2C046BE900E1C798 /* ContentView.swift */,
 				8C1B133C2C08CE2E00B4867C /* PatientLogView.swift */,
 				8C6E05882C1C1AAC0061CD29 /* ExportDataView.swift */,
+				8CC8EF082C1CC32C00361852 /* HomeView.swift */,
+				8CC8EF0C2C1CC35600361852 /* SplashView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		8C4DC6682C046C8100E1C798 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				8C4DC6692C046C8100E1C798 /* Poppins-ExtraLight.ttf */,
-				8C4DC66A2C046C8100E1C798 /* toona.ttf */,
-				8C4DC66B2C046C8100E1C798 /* Book Antiqua Font.ttf */,
-				8C4DC66C2C046C8100E1C798 /* Poppins-Regular.ttf */,
-				8C4DC66D2C046C8100E1C798 /* OpenSans-Regular.ttf */,
-				8C4DC66E2C046C8200E1C798 /* Book Antiqua Bold.ttf */,
-			);
-			name = Fonts;
-			path = ../../../Downloads/Catalog/Catalog/Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +168,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8CC8EF162C1CC49100361852 /* Fonts */,
 			);
 			name = Catalog;
 			productName = Catalog;
@@ -283,13 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C4DC6742C046C8200E1C798 /* Book Antiqua Bold.ttf in Resources */,
-				8C4DC66F2C046C8200E1C798 /* Poppins-ExtraLight.ttf in Resources */,
 				8C4DC6442C046BEA00E1C798 /* Preview Assets.xcassets in Resources */,
-				8C4DC6712C046C8200E1C798 /* Book Antiqua Font.ttf in Resources */,
-				8C4DC6732C046C8200E1C798 /* OpenSans-Regular.ttf in Resources */,
-				8C4DC6722C046C8200E1C798 /* Poppins-Regular.ttf in Resources */,
-				8C4DC6702C046C8200E1C798 /* toona.ttf in Resources */,
 				8C4DC6412C046BEA00E1C798 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,13 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C4DC6782C046CB700E1C798 /* SplashView.swift in Sources */,
 				8C1B133D2C08CE2F00B4867C /* PatientLogView.swift in Sources */,
-				8C4DC63F2C046BE900E1C798 /* ContentView.swift in Sources */,
+				8CC8EF092C1CC32C00361852 /* HomeView.swift in Sources */,
 				8C4DC6862C04FF4E00E1C798 /* ConsentFormView.swift in Sources */,
-				8C4DC67A2C046CD400E1C798 /* HomeView.swift in Sources */,
 				8C6E05892C1C1AAC0061CD29 /* ExportDataView.swift in Sources */,
 				8C4DC63D2C046BE900E1C798 /* CatalogApp.swift in Sources */,
+				8CC8EF0D2C1CC35600361852 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +454,7 @@
 				DEVELOPMENT_TEAM = 3VU8FT8N2G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = /Users/duck/Downloads/Catalog/Catalog/Info.plist;
+				INFOPLIST_FILE = /Users/duck/Documents/Github/Catalog/Catalog/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -513,7 +484,7 @@
 				DEVELOPMENT_TEAM = 3VU8FT8N2G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = /Users/duck/Downloads/Catalog/Catalog/Info.plist;
+				INFOPLIST_FILE = /Users/duck/Documents/Github/Catalog/Catalog/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

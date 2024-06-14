@@ -43,8 +43,10 @@ struct SplashView: View {
                 }
             }
             .onAppear {
+                // Run the enclosed function after 4.0 seconds
                 DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
                     withAnimation {
+                        // Open HomeView()
                         self.loaded = true;
                     }
                 }
