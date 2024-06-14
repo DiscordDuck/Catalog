@@ -19,15 +19,6 @@ struct PatientLogView: View {
         NavigationStack {
             VStack {
                 HStack {
-                    /*
-                    if checkNil() {
-                        img.onAppear {
-                            showingImage = true
-                        }
-                    }
-                    else if ({ print("NO IMAGE") ; return true })() {
-                        
-                    } */
                     if !showingImage {
                         Text("Patient Consent Form")
                             .fixedSize()
@@ -60,17 +51,6 @@ struct PatientLogView: View {
                                 .cornerRadius(50)
                                 .frame(width: 400, height: 50)
                         }
-                        /*
-                        .navigationDestination(isPresented: $openConsentFormView) {
-                            ConsentFormView(
-                                loadStaticView: true
-                            ).onAppear {
-                                image = returnScreenshot()
-                                print("image: \(checkNil())")
-                                refreshState += 1
-                                showingImage = true
-                            }
-                        } */
                     }
                     else if image == nil {
                         Text("Nothing appearing? Load the view first in the Forms tab and try again!")
@@ -93,9 +73,6 @@ struct PatientLogView: View {
                                     .cornerRadius(50)
                                     .frame(width: 400, height: 50)
                             }
-                            .onAppear {
-                                print("loaded")
-                            }
                             image
                             Spacer()
                         }
@@ -116,18 +93,6 @@ struct PatientLogView: View {
         let rawDate = calendar.dateComponents(query, from: now)
         return String(rawDate.year!) + String(rawDate.month!) + String(rawDate.day!)
     }
-    
-    /*
-    func checkNil() -> Bool {
-        if let img = image {
-            print("HAS IMAGE")
-            return false
-        }
-        else {
-            print("NO IMAGE")
-            return true
-        }
-    } */
     
     func setImage() {
         image = returnScreenshot()
