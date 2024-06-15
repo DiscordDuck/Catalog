@@ -45,7 +45,7 @@ struct HomeView: View {
         return components.joined(separator: "")
     }
     
-    
+    // Returns an array of UUIDs of all completed views/forms
     func filterCompletedViews() -> [UUID] {
         var array = [] as [UUID]
         
@@ -293,8 +293,11 @@ struct HomeView: View {
                             }
                             .confirmationDialog("Are you sure?", isPresented: $presentConfirmDelete) {
                                 Button("I CONFIRM: Delete ALL Data", role: .destructive) {
+                                    // Deletes all entries with class matching kSecClassGenericPassword
                                     let req: NSDictionary = [kSecClass: kSecClassGenericPassword]
                                     SecItemDelete(req)
+                                    // Returns back to the main login screen
+                                    screen = true
                                     logout()
                                 }
                             }
